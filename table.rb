@@ -8,13 +8,24 @@ require "nokogiri"
 
 Benchmark.bm do |x|
   x.report("nokogiri") do
-    Nokogiri::HTML(browser.html).css("div[id ^= 'flightModule']").size
+    Nokogiri::HTML(browser.html).css("div[id ^= 'flightModule']").each do |div|
+      if div["id"] == "flightModuleControl38"
+        css = div.css_path
+        browser.element(css: css).wd.location_once_scrolled_into_view
+        browser.element(css: css).flash
+      end
+    end
   end
 end
 
 Benchmark.bm do |x|
   x.report("watir") do
-    browser.divs(id: /^flightModule/).size
+    browser.divs(id: /^flightModule/).each do |div|
+      if div.id == "flightModuleControl38"
+        div.wd.location_once_scrolled_into_view
+        div.flash
+      end
+    end
   end
 end
 
