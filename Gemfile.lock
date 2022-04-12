@@ -9,7 +9,7 @@ GEM
       addressable
     mini_portile2 (2.8.0)
     multi_json (1.3.4)
-    nokogiri (1.13.2)
+    nokogiri (1.13.4)
       mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
     racc (1.6.0)
