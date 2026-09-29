@@ -13,7 +13,7 @@ GEM
       mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
     racc (1.8.1)
-    rubyzip (2.0.0)
+    rubyzip (3.4.0)
     selenium-webdriver (2.21.2)
       childprocess (>= 0.2.5)
       ffi (~> 1.0)
