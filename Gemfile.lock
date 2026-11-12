@@ -1,7 +1,8 @@
 GEM
   remote: http://rubygems.org/
   specs:
-    addressable (2.2.8)
+    addressable (2.9.1)
+      public_suffix (>= 2.0.2, < 8.0)
     childprocess (0.3.2)
       ffi (~> 1.0.6)
     ffi (1.0.11)
@@ -12,6 +13,7 @@ GEM
     nokogiri (1.19.4)
       mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
+    public_suffix (7.0.5)
     racc (1.8.1)
     rubyzip (3.4.0)
     selenium-webdriver (2.21.2)
